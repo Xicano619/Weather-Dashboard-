@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>Weather Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <!--Font Awesome CSS Icons (for cool glyphicons)  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+    <!-- Style to fix the issue of the text extending past card Length -->
+    <style>
+        .card-body a {
+            word-break: break-all;
+        }
+        .articleHeadline {
+            line-height: 1.5;
+        }
+    </style>
+  </head>
+
+  <body>
+      <!-- Main Bootstrap Search -->
+        <div class="container">
+
+            <!-- Jumbotron for Title -->
+            <div class="jumbotron" style="background-color:  #191970; color: snow;">
+                <h1 class="text-center">
+                    <strong>
+                    <i class="fas fa-cloud-sun"></i>Weather Dashboard</strong>
+
+                </h1>
+            </div>
+            
+            <!-- Row for Search for city: -->
+            <div class="row">
+                <div class="col-sm-4">
+                    <!-- Here we create an HTML Form for handling the inputs -->
+                    <form role="form">
+                        
+                        <!-- Here we create the text box for capturing the search term -->
+                        <div class="form-group">
+                            <label for="search">Search for a City:</label>
+                            <div class="input-group">
+                                <input class="form-control py-2" type="search"  id="search-input">
+                                <span class="input-group-append">
+                                  <button class="btn btn-outline-secondary" type="button" id="search-Btn">
+                                      <i class="fa fa-search"></i>
+                                  </button>
+                                </span>
+                          </div>
+                        </div>
+                    </form>
+
+                
+                </div>
+
+                <div class="col-md-8">
+                    <h1 id="city-name-date"></h1>
+                    
+                    <!-- Retrieved data will be dumped here -->
+                      <div class="temp">1</div>
+                      <div class="humidity">4</div>
+                      <div class="wind">3</div>
+                      <div class="UV-Index">4</div>
+  
+                
+                </div>
+
+
+            </div>
+
+
+            <!-- This row will handle all of the retrieved articles -->
+        <div class="row">
+            <div class="col-sm-4">
+                <br>
+
+                <!-- This card will initially be made up of a card and wells for each of the articles retrieved -->
+                <div class="card">
+
+                    <!-- card Heading for the retrieved articles box -->
+                    <div class="card-header">
+                        <strong>
+                            <i class="fa fa-table">Cities</i></strong>
+                    </div>
+
+                    <!-- This main card will hold each of the resulting cities  -->
+                    <div class="card-body" id="city-section">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="card">
+                   <div class="card-body" id="5Day">
+                      <h2 id="fiveDayFore">5-Day Forecast:</h2>
+
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+
+
+        
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="./assets/javascript.js"></script>
+
+        
+    </body>
+</html>
