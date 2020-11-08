@@ -38,6 +38,6 @@ Day 5 Humidity
 
 
 ### Application Link
-https://github.com/Xicano619/Weather-Dashboard-
+https://xicano619.github.io/Weather-Dashboard-/
 
 
