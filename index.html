@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <title>Weather Dashboard</title>
@@ -17,119 +17,154 @@
         .card-body a {
             word-break: break-all;
         }
+
         .articleHeadline {
             line-height: 1.5;
         }
     </style>
-  </head>
+</head>
 
-  <body>
-      <!-- Main Bootstrap Search -->
-        <div class="container">
+<body>
+    <!-- Main Bootstrap Search -->
+    <div class="container">
 
-            <!-- Jumbotron for Title -->
-            <div class="jumbotron" style="background-color:  #191970; color: snow;">
-                <h1 class="text-center">
-                    <strong>
+        <!-- Jumbotron for Title -->
+        <div class="jumbotron" style="background-color:  #191970; color: snow;">
+            <h1 class="text-center">
+                <strong>
                     <i class="fas fa-cloud-sun"></i>Weather Dashboard</strong>
 
-                </h1>
-            </div>
-            
-            <!-- Row for Search for city: -->
-            <div class="row">
-                <div class="col-sm-4">
-                    <!-- Here we create an HTML Form for handling the inputs -->
-                    <form role="form">
-                        
-                        <!-- Here we create the text box for capturing the search term -->
-                        <div class="form-group">
-                            <label for="search">Search for a City:</label>
-                            <div class="input-group">
-                                <input class="form-control py-2" type="search"  id="search-input">
-                                <span class="input-group-append">
-                                  <button class="btn btn-outline-secondary" type="button" id="search-Btn">
-                                      <i class="fa fa-search"></i>
-                                  </button>
-                                </span>
-                          </div>
-                        </div>
-                    </form>
+            </h1>
+        </div>
 
-                
-                </div>
-
-                <div class="col-md-8">
-                    
-                    
-                    <!-- Retrieved data will be dumped here -->
-                      <div class="city"></div>
-                      <div class="temp"></div>
-                      <div class="humidity"></div>
-                      <div class="wind"></div>
-                      <!-- <div class="UV-Index"></div> -->
-  
-                
-                </div>
-
-
-            </div>
-
-
-            <!-- This row will handle all of the retrieved articles -->
+        <!-- Row for Search for city: -->
         <div class="row">
             <div class="col-sm-4">
+                <!-- Here we create an HTML Form for handling the inputs -->
+                <form role="form">
+
+                    <!-- Here we create the text box for capturing the search term -->
+                    <div class="form-group">
+                        <label for="search">Search for a City:</label>
+                        <div class="input-group">
+                            <input class="form-control py-2" type="search" id="search-input">
+                            <span class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" id="search-Btn">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+
+            <div class="col-md-8">
+
+
+                <!-- Retrieved data will be dumped here -->
+                <div class="city"></div>
+                <br>
+                <div class="temp"></div>
+                <br>
+                <div class="humidity"></div>
+                <br>
+                <div class="wind"></div>
+                <!-- <div class="UV-Index"></div> -->
+            </div>
+
+
+        </div>
+        <br>
+        <br>
+
+        <!-- This row will handle all of the retrieved cities -->
+        <div class="row">
+            <div class="col-md-4">
                 <br>
 
                 <!-- This card will initially be made up of a card and wells for each of the articles retrieved -->
                 <div class="card">
 
-                    <!-- card Heading for the retrieved articles box -->
+                    <!-- card Heading for the retrieved cities -->
                     <div class="card-header">
                         <strong>
                             <i class="fa fa-table">Cities</i></strong>
                     </div>
 
                     <!-- This main card will hold each of the resulting cities  -->
-                    <div class="card-body" id="city-section">
+                    <div class="card-body" id="city-section" data-store="cities">
                     </div>
                 </div>
             </div>
+
 
             <div class="col-md-8">
-                <div class="card">
-                   <div class="card-body" id="5Day">
-                      <h2 id="fiveDayFore">5-Day Forecast:</h2>
 
-                      <div class="card1">
+
+                <div id="fiveDayFore"></div>
+                <div class="col-sm-1">
+                    <div class="card1" style="width: 10rem;">
                         <div class="card-body-1"></div>
-                      </div>
-                      <div class="card2">
-                        <div class="card-body-2"></div>
-                      </div>
-                      <div class="card3">
-                        <div class="card-body-3"></div>
-                      </div>
-                      <div class="card4">
-                        <div class="card-body-4"></div>
-                      </div>
-                      <div class="card5">
-                        <div class="card-body-5"></div>
-                      </div>
-
+                        <br>
+                        <div class="icon1"></div>
+                        <div class="temp1"></div>
+                        <br>
+                        <div class="hum1"></div>
                     </div>
+                </div>
+
+                <div class="card2" style="width: 10rem;">
+                    <div class="card-body-2"></div>
+                    <br>
+                    <div class="icon2"></div>
+                    <div class="temp2"></div>
+                    <br>
+                    <div class="hum2"></div>
+                </div>
+
+                <div class="card3" style="width: 10rem;">
+                    <div class="card-body-3"></div>
+                    <br>
+                    <div class="icon3"></div>
+                    <div class="temp3"></div>
+                    <br>
+                    <div class="hum3"></div>
+                </div>
+
+                <div class="card4" style="width: 10rem;">
+                    <div class="card-body-4"></div>
+                    <br>
+                    <div class="icon4"></div>
+                    <div class="temp4"></div>
+                    <br>
+                    <div class="hum4"></div>
+                </div>
+                <div class="card5" style="width: 10rem;">
+                    <div class="card-body-5"></div>
+                    <br>
+                    <div class="icon5"></div>
+                    <div class="temp5"></div>
+                    <br>
+                    <div class="hum5"></div>
                 </div>
             </div>
 
-            
+
+
         </div>
 
 
-        
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="./assets/javascript.js"></script>
+    </div>
 
-        
-    </body>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/javascript.js"></script>
+
+
+</body>
+
 </html>
