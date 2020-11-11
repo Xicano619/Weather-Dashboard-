@@ -34,7 +34,7 @@ Day 5 Humidity
 
 ### Application Preview
 
- ![Weather-Dashboard](./assets./weather-db.png)
+ ![Weather-Dashboard](./weather-db.png)
 ![Weather-Dashboard](./weather-db1.png)
 
 ### Application Link
