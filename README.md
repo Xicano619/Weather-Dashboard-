@@ -34,8 +34,8 @@ Day 5 Humidity
 
 ### Application Preview
 
- ![Weather-Dashboard](./weather-db.png)
-![Weather-Dashboard](./weather-db1.png)
+ ![Weather-Dashboard](./assets/WeatherDash.png)
+![Weather-Dashboard](./assets/WeatherDash2.png)
 
 ### Application Link
 https://xicano619.github.io/Weather-Dashboard-/
